@@ -1,151 +1,158 @@
-Git – Comandos e Merge com conflito
+# DevSuperior - Desafio Git Merge
 
-![Git](image/image-1.png)
+## 📋 Descrição do Projeto
 
+Este repositório foi criado como parte do curso de **Fundação de Programação da DevSuperior** com foco em versionamento de código utilizando **Git e GitHub**. O objetivo é demonstrar o uso de comandos Git essenciais e a resolução de conflitos de merge.
 
-Git
+## 🎯 Objetivos
 
-Clicando com o botão direito do mouse selecione a opção:
-“Open Git Bash here”.
+- Aprender os fundamentos do Git e controle de versão
+- Dominar comandos essenciais do Git
+- Praticar criação e gerenciamento de branches
+- Resolver conflitos de merge em repositórios
+- Implementar boas práticas de versionamento
 
-![Open Git Bash here](image/image-1-1.png)
+## 📁 Estrutura do Projeto
 
+```
+DevSuperiorDesafioGitMerge/
+├── README_COMPLETO.md                 # Este arquivo
+├── docs/
+│   ├── FUNDAMENTOS_GIT.md             # Conceitos fundamentais do Git
+│   └── COMANDOS_GIT.md                # Referência de comandos Git
+├── blog.html                           # Página blog
+├── catalog.html                        # Página catálogo
+├── index.html                          # Página inicial
+├── sobre.html                          # Página sobre
+└── image/                              # Imagens do projeto
+```
 
-Git – git init
+## 🚀 Como Começar
 
-Dentro do terminal Git. Digite o seguinte comando:
-“git init”.
+### Pré-requisitos
+- Git instalado na máquina
+- Conta no GitHub
+- Visual Studio Code ou outro editor de código
 
-Este comando seria para inicializar o Git.
+### Clonar o Repositório
 
-![git init](image/image-2.png)
+```bash
+git clone https://github.com/gabrielsalesdavid/DevSuperiorDesafioGitMerge.git
+cd DevSuperiorDesafioGitMerge
+```
 
+### Estruturar o Ambiente
 
-Git – git checkout
+```bash
+# Inicializar Git (se necessário)
+git init
 
-Após inicializar o Git. Digite o seguinte comando:
-“git checkout -b main”.
+# Criar branch principal
+git checkout -b main
 
-Este comando seria para checar ou voltar ao Branch que deseja. Já o “-b” é a forma de criação de Branch. Ou seja, git crie uma branch(-b) “main”.
+# Adicionar repositório remoto
+git remote add origin git@github.com:gabrielsalesdavid/DevSuperiorDesafioGitMerge.git
+```
 
-![git checkout](image/image-3.png)
+## 📚 Documentação
 
+Para aprender mais sobre Git e seus comandos, consulte a documentação disponível:
 
-Git – git remote add origin
+- **[Fundamentos do Git](docs/FUNDAMENTOS_GIT.md)** - Conceitos essenciais e estrutura do Git
+- **[Comandos Git](docs/COMANDOS_GIT.md)** - Referência completa de comandos com exemplos
 
-Estando na branch main. Digite o seguinte comando:
-“git remote add origin <git@github.com:user/repository>”
+## 🔄 Fluxo de Trabalho
 
-Este comando seria para adicionar o repositório remoto para o local.
+1. **Status**: Verificar alterações
+   ```bash
+   git status
+   ```
 
-![git remote add origin](image/image-4.png)
+2. **Adicionar**: Preparar arquivos para commit
+   ```bash
+   git add .
+   ```
 
+3. **Commit**: Registrar alterações
+   ```bash
+   git commit -m "Descrição das alterações"
+   ```
 
-Git – git status
+4. **Push**: Enviar para o repositório remoto
+   ```bash
+   git push origin [branch-name]
+   ```
 
-Após realizar um projeto ou alteração em seu repositório local. Sempre é necessário digitar o seguinte comando:
-“git status”.
-O comando “clear” é para limpeza do terminal. Este comando deriva-se do Linux!
+5. **Pull**: Obter atualizações do repositório remoto
+   ```bash
+   git pull origin main
+   ```
 
-Este comando verifica se há alguma informação alterada ou inserida no repositório local!
+## 🌿 Gerenciamento de Branches
 
-![git status](image/image-5.png)
+```bash
+# Listar branches locais
+git branch
 
+# Listar todas as branches
+git branch -a
 
-Git – git add . & git commit -m
+# Criar nova branch
+git checkout -b nome-da-branch
 
-Após verificar se possui alguma informação no repositório local. Digite o seguinte comando no terminal:
-“git add .”
-&
-“git commit -m <“Informativo sobre o que foi feito”>”.
+# Mudar de branch
+git checkout nome-da-branch
 
-Sempre seguindo essas sequências:
-1 – “git add .”.
-2 – “git commit -m”.
-O comando “git add .”, seria para salvar as alterações do repositório local.
-Já o comando “git commit -m”, seria para salvar as versões com as informações para o repositório remoto sobre o que foi feito.
+# Deletar branch
+git branch -d nome-da-branch
+```
 
-![git add . & git commit -m](image/image-6.png)
+## 🔀 Merge e Resolução de Conflitos
 
+```bash
+# Fazer merge de uma branch
+git merge nome-da-branch
 
-Git – git log --oneline
+# Resolver conflitos manualmente nos arquivos
+# Depois, adicionar e fazer commit
 
-Para verificar os commits feitos. Digite o seguinte comando:
-“git log --oneline”.
+git add .
+git commit -m "Resolve conflito de merge"
+```
 
-Este comando seria para verificar os logs sobre os commits que foram feitos e que continua no repositório local.
+## 🎓 Tópicos Cobertos
 
-![git log --oneline](image/image-7.png)
+- ✅ Inicialização de repositórios
+- ✅ Configuração remota
+- ✅ Status e alterações
+- ✅ Staging e commits
+- ✅ Branches e checkout
+- ✅ Merge e conflitos
+- ✅ Push e Pull
+- ✅ Histórico de commits
 
+## 📝 Contribuindo
 
-Git – git push -u origin main
+1. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
+2. Commit suas alterações (`git commit -am 'Adiciona nova funcionalidade'`)
+3. Push para a branch (`git push origin feature/nova-funcionalidade`)
+4. Abra um Pull Request no GitHub
 
-Para o envio pela primeira vez do repositório local para o remoto. Digite o seguinte comando:
-“git push -u origin main”.
+## 📚 Recursos Adicionais
 
-Este comando seria para envios do repositório local para o remoto. Envia todos os dados realizados/alterados(commits).
+- [Documentação Oficial do Git](https://git-scm.com/doc)
+- [GitHub Guides](https://guides.github.com)
+- [DevSuperior](https://devsuperior.com.br)
 
-![git push -u origin main](image/image-8.png)
+## 👤 Autor
 
+**Gabriel Sales David**
+- GitHub: [@gabrielsalesdavid](https://github.com/gabrielsalesdavid)
 
-Git – git pull origin main
+## 📄 Licença
 
-Para atualizar o repositorio local. Digite o seguinte comando:
-“git pull origin main”.
+Este projeto é parte do curso DevSuperior e está disponível para fins educacionais.
 
-Este comando seria para trazer ou atualizar tudo que está no repositório remoto para o local.
+---
 
-![git pull origin main](image/image-9.png)
-
-
-Git – git merge
-
-Para unificar os dados de uma feature para o branch main. Digite o seguinte comando:
-“git merge <feature>”.
-
-Este comando unifica/atualiza todas as informações numa branch. Sempre fazemos um merge para o branch que não possui as informações. Ou seja, o branch criada após o main é o que terá as informações novas, assim pegamos esses dados e passamos para o branch que não possui, no caso o main.
-
-![git merge](image/image-10.png)
-
-
-Git – git remote -v & git remote rm origin
-
-Para verificar uma branch remote ou deletar do repositório local. Digite o seguinte comando:
-“git remote -v”.
-&
-“git remote rm origin”.
-
-O comando: “git remote -v”, verifica em qual repositório remoto o Git está.
-Já o comando: “git remote rm origin”, remove o repositório remoto do Git.
-
-![git remote -v & git remote rm origin](image/image-11.png)
-
-
-Git – git push -u origin <feature>
-
-Para o envio do repositório local para o remoto. Digite o seguinte comando:
-“git push -u origin <feature>”.
-
-Este comando seria para envios do repositório local para o remoto. Envia todos os dados realizados/alterados(commits).
-
-![git push -u origin <feature>](image/image-12.png)
-
-
-Git – git clone
-
-Para clonar o repositório remoto para o local. Digite o seguinte comando:
-“git clone <git@github.com:user/repositorioremoto>”.
-
-Este comando seria para envios do repositório local para o remoto. Envia todos os dados realizados/alterados(commits).
-
-![git clone](image/image-13.png)
-
-
-Git – Merge com conflito
-
-Para realizar um merge da feature para o branch main. Digite o seguinte comando:
-“git merge main”.
-
-Este comando seria para mesclar os dados de uma feature que foi clonada e teve dados inseridos sem que a pessoa saiba ou possa ter esquecido sobre os dados a mais no repositório remoto.
-
-![Merge com conflito](image/image-14.png)
+**Última atualização:** 20 de novembro de 2025
